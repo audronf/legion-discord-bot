@@ -1,5 +1,4 @@
 const { Client, Intents } = require('discord.js');
-const config = require("./config.json");
 const state = require("./state.json");
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] })
@@ -27,4 +26,4 @@ client.on("message", function(message) {
     }
 });
 
-client.login(config.bot_token);
+client.login(process.env.bot_token);
